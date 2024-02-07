@@ -1,2 +1,2 @@
-# Test_Generator
+# Test Generator
 AI powered Test Generator
