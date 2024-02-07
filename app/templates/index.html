@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test.G</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+        }
+    </style>
+    <script>
+        function handleInput() {
+            var textarea = document.getElementById('testDescription');
+            var clearBtn = document.getElementById('clearBtn');
+            if (textarea.value.trim() === '') {
+                clearBtn.disabled = true;
+            } else {
+                clearBtn.disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="nav">
+                <a class="navbar-brand" href="/">Test.G</a>
+                <a href="#" class="nav-link">Applications</a>
+                <a href="#" class="nav-link">Contacts</a>
+                <a href="#" class="nav-link">Articles</a>
+            </div>
+            <div>
+                <a href="https://github.com" class="navbar-text"><i class="bi bi-github"></i></a>
+                <a href="/login" class="navbar-text"><i class="bi bi-person"></i></a>
+                <a href="/documentation" class="navbar-text"><i class="bi bi-book"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <form method="post">
+            <div class="mb-3">
+                <label for="testDescription" class="form-label">Describe your test:</label>
+                <textarea class="form-control" id="testDescription" name="text" rows="5" oninput="handleInput()"></textarea>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" name="action" value="Generate">Generate</button>
+                <button type="submit" class="btn btn-secondary" id="clearBtn" name="action" value="Clear" disabled><i class="bi bi-trash"></i> Clear</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
