@@ -1,2 +1,2 @@
-# Test Generator
-AI powered Test Generator
+# Quiz App 
+### Powered by LLM
